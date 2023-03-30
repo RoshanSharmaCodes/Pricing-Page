@@ -1,0 +1,32 @@
+.pricingContainer{
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.pricingNavbar{
+    background-color: white;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headingText{
+    font-family: "Poppins-Medium",sans-serif;
+    font-size: 34px;
+    font-weight: 700;
+    color: black;
+}
+
+.pricingMain{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px;
+    justify-content: center;
+}
+
+

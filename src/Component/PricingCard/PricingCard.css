@@ -1,0 +1,162 @@
+.cardContainer{
+    width: 300px;
+    height: 510px;
+    border-radius: 20px;
+    border: 3px solid #6C63FF;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: white;
+}
+
+.cardContainer:hover{
+    animation-name: "zoomIn";
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+}
+
+
+
+
+.cardHeader{
+    flex: 4;
+}
+.cardImgHeader{
+    height: 150px;
+    width: 150px;
+    object-fit: contain;
+}
+
+.cardBody{
+    flex: 8;
+}
+.cardFooter{
+    flex: 2;
+}
+
+
+.buyPlanButton{
+    width: 70%;
+    height: 60px;
+    border-radius: 50px;
+    border: 2px solid white;
+    font-size: 25px;
+    letter-spacing: 3px;
+    background-color: #6C63FF;
+    position: absolute;
+    bottom: -25px;
+    left: 45px;
+    z-index: 1;
+    color: white;
+    cursor: pointer;
+}
+
+
+.buyPlanButton::before{
+    content: "";
+    border-radius: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #82CD47;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .buyPlanButton:hover::before {
+    transform: scaleX(1);
+  }
+  
+
+.cardNameText{
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #6C63FF;
+}
+
+
+
+.cardPriceText{
+    font-size: 30px;
+}
+
+.cardPriceTag{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    background-color: #73cb2f;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: glow 1s infinite alternate;
+}
+
+.cardFeatureList{
+    color:black;
+    text-align: left;
+    padding: 0px 20px;
+    margin-top: 20px;
+    
+}
+
+.cardFeatureListItem{
+    height: 50px;
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+    padding: 0 20px;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+    box-shadow: 0px 2px 6px 0px rgba(232,232,232,1);
+    background-color: white;
+}
+
+.featureTicksImg{
+    height:20px;
+    width: 20px;
+}
+
+.crownCard{
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    transform: rotate(35deg);
+    top:-105px;
+    right:-60px;
+    z-index: 10;
+    background-clip: content-box;
+}
+@keyframes glow {
+    from {
+      box-shadow: 0 0 10px -10px #aef4af;
+    }
+    to {
+      box-shadow: 0 0 10px 10px #aef4af;
+    }
+  }
+
+  @keyframes zoomIn {
+    from {
+    }
+    to {
+        transform: scale(1.05);
+    }
+  }
+
+
+.wave{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
